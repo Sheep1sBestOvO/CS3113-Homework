@@ -27,10 +27,10 @@ enum Coordinate
 const int WINDOW_WIDTH = 640,
           WINDOW_HEIGHT = 480;
 
-const float BG_RED = 0.0f,
-            BG_BLUE = 0.0f,
-            BG_GREEN = 0.0f,
-            BG_OPACITY = 1.0f;
+float BG_RED = 0.5f,
+        BG_BLUE = 0.0f,
+        BG_GREEN = 0.0f,
+        BG_OPACITY = 1.0f;
 
 const int VIEWPORT_X = 0,
           VIEWPORT_Y = 0,
@@ -54,15 +54,16 @@ const char Eren_File_Path[] = "assets/Eren.jpeg";
 SDL_Window* g_display_window;
 bool g_game_is_running = true;
 bool g_is_growing = true;
+int  g_frame_counter   = 0;
 
 ShaderProgram g_shader_program;
 glm::mat4 view_matrix, g_model_matrix_1, g_projection_matrix, g_trans_matrix, g_model_matrix_2;
 
 float g_previous_ticks = 0.0f;
 
-const float RADIUS = 2.0f;      // radius of circle
+const float RADIUS = 5.0f;      // radius of circle
 const float ROT_SPEED = 0.01f;  // rotational speed
-const float ROT_ANGLE = glm::radians(1.5f);
+const float ROT_ANGLE = glm::radians(0.1f);
 const float TRAN_VALUE = 0.01f;
 
 float g_angle    = 0.0f;        // current angle accumulated
@@ -140,6 +141,7 @@ void initialise()
     g_shader_program.load(V_SHADER_PATH, F_SHADER_PATH);
     
     g_model_matrix_1 = glm::mat4(1.0f);
+    g_model_matrix_2 = glm::mat4(1.0f);
     view_matrix = glm::mat4(1.0f);  // Defines the position (location and orientation) of the camera
     g_projection_matrix = glm::ortho(-5.0f, 5.0f, -3.75f, 3.75f, -1.0f, 1.0f);  // Defines the characteristics of your camera, such as clip planes, field of view, projection method etc.
     
@@ -176,16 +178,35 @@ void process_input()
 }
 
 void update()
-{   
+{
+
     float ticks = (float) SDL_GetTicks() / MILLISECONDS_IN_SECOND; // get the current number of ticks
     float delta_time = ticks - g_previous_ticks; // the delta time is the difference from the last frame
     g_previous_ticks = ticks;
+    
+    g_frame_counter++;
+        if (g_frame_counter >= 100)
+            {
+                g_is_growing = !g_is_growing;
+                g_frame_counter = 0;
+            }
+        glm::vec3 scale_vector;
+        
+        
+        scale_vector = glm::vec3(g_is_growing ? GROWTH_FACTOR : SHRINK_FACTOR,
+                                     g_is_growing ? GROWTH_FACTOR : SHRINK_FACTOR,
+                                     1.0f);
+    
+    g_model_matrix_1 =glm::scale(g_model_matrix_1, scale_vector);
     
     
     g_model_matrix_1 = glm::rotate(g_model_matrix_1, ROT_ANGLE * delta_time, glm::vec3(0.0f, 0.0f, 1.0f));
     g_model_matrix_1 = glm::translate(g_model_matrix_1, glm::vec3(TRAN_VALUE * delta_time * 10, TRAN_VALUE * delta_time * 10, 0));
     
-    g_angle += ROT_ANGLE;
+    BG_BLUE += 0.01f;
+    glClearColor(BG_RED, BG_BLUE, BG_GREEN, BG_OPACITY);
+    
+    g_angle += ROT_SPEED;
     g_x_coords = RADIUS * glm::cos(g_angle);
     g_y_coords = RADIUS * glm::sin(g_angle);
     
