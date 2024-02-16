@@ -20,6 +20,7 @@
 		3C80919E2B7E647700FF751E /* Cocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3F5FAD2B7DBD5F004C3BC0 /* Cocoa.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C80919F2B7E647700FF751E /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3F5FAB2B7DBD50004C3BC0 /* OpenGL.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C8091A02B7E647D00FF751E /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C3F5FA42B7DBC95004C3BC0 /* shaders */; };
+		3CFFC9FD2B7F0D5700292C53 /* assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CFFC9FC2B7F0D5700292C53 /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				3CFFC9FD2B7F0D5700292C53 /* assets in CopyFiles */,
 				3C8091A02B7E647D00FF751E /* shaders in CopyFiles */,
 				3C80919B2B7E647700FF751E /* SDL2_image.framework in CopyFiles */,
 				3C80919C2B7E647700FF751E /* SDL2_mixer.framework in CopyFiles */,
@@ -53,6 +55,7 @@
 		3C3F5FAF2B7DBD71004C3BC0 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		3C3F5FB02B7DBD71004C3BC0 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		3C3F5FB12B7DBD71004C3BC0 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		3CFFC9FC2B7F0D5700292C53 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 		3C3F5F912B7DBC23004C3BC0 = {
 			isa = PBXGroup;
 			children = (
+				3CFFC9FC2B7F0D5700292C53 /* assets */,
 				3C3F5F9C2B7DBC23004C3BC0 /* Draw2D */,
 				3C3F5F9B2B7DBC23004C3BC0 /* Products */,
 				3C3F5FAA2B7DBD50004C3BC0 /* Frameworks */,
