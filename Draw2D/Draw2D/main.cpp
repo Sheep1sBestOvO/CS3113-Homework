@@ -76,8 +76,8 @@ glm::mat4 view_matrix, g_model_matrix_1, g_projection_matrix, g_trans_matrix, g_
 
 float g_previous_ticks = 0.0f;
 
-const float RADIUS = 5.0f;      // radius of circle
-const float ROT_SPEED = 0.01f;  // rotational speed
+const float RADIUS = 2.0f;      // radius of circle
+const float ROT_SPEED = 1.0f;  // rotational speed
 const float ROT_ANGLE = glm::radians(0.1f);
 const float TRAN_VALUE = 0.01f;
 
@@ -157,6 +157,8 @@ void initialise()
     
     g_model_matrix_1 = glm::mat4(1.0f);
     g_model_matrix_2 = glm::mat4(1.0f);
+    
+    g_model_matrix_2 = glm::translate(g_model_matrix_2, glm::vec3(1.0f, 1.0f, 0.0f));
     view_matrix = glm::mat4(1.0f);  // Defines the position (location and orientation) of the camera
     g_projection_matrix = glm::ortho(-5.0f, 5.0f, -3.75f, 3.75f, -1.0f, 1.0f);  // Defines the characteristics of your camera, such as clip planes, field of view, projection method etc.
     
@@ -221,11 +223,11 @@ void update()
     BG_BLUE += 0.01f;
     glClearColor(BG_RED, BG_BLUE, BG_GREEN, BG_OPACITY);
     
-    g_angle += ROT_SPEED;
+    g_angle += ROT_SPEED * delta_time;
     g_x_coords = RADIUS * glm::cos(g_angle);
     g_y_coords = RADIUS * glm::sin(g_angle);
     
-    g_model_matrix_2 = glm::translate(g_model_matrix_1, glm::vec3(g_x_coords * delta_time * 30, g_y_coords * delta_time * 30, 0));
+    g_model_matrix_2 = glm::translate(g_model_matrix_1, glm::vec3(g_x_coords  , g_y_coords , 0));
 }
 
 void draw_object(glm::mat4 &object_model_matrix, GLuint &object_texture_id)
