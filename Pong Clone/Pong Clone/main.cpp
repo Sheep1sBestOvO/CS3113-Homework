@@ -83,6 +83,7 @@ float g_ball_speed = 2.0f;
 bool g_paddle_can_move = true;
 bool g_player_1_win = false;
 bool g_player_2_win = false;
+bool g_player_2_up = true;
               
 GLuint g_ball_texture_id,
        g_paddle_texture_id,
@@ -294,17 +295,32 @@ void process_input()
         {
             g_paddle_2_movement.y = -1.0f;
         }
+        
+        if(!g_paddle_can_move){
+            if (g_paddle_2_position.y > 3.25f){
+                g_player_2_up = !g_player_2_up;
+            }
+            if (g_paddle_2_position.y < -3.25f){
+                g_player_2_up = !g_player_2_up;
+            }
+            if (g_player_2_up )
+            {
+                g_paddle_2_movement.y = 1.0f;
+            }else if ( !g_player_2_up ){
+                g_paddle_2_movement.y = -1.0f;
+            }
+        }
     }
     
-    if (glm::length(g_paddle_1_movement) > 1.0f)
-    {
-        g_paddle_1_movement = glm::normalize(g_paddle_1_movement);
-    }
-    
-    if (glm::length(g_paddle_2_movement) > 1.0f)
-    {
-        g_paddle_2_movement = glm::normalize(g_paddle_2_movement);
-    }
+//    if (glm::length(g_paddle_1_movement) > 1.0f)
+//    {
+//        g_paddle_1_movement = glm::normalize(g_paddle_1_movement);
+//    }
+//    
+//    if (glm::length(g_paddle_2_movement) > 1.0f)
+//    {
+//        g_paddle_2_movement = glm::normalize(g_paddle_2_movement);
+//    }
 }
 
 
