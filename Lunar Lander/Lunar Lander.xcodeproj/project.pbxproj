@@ -15,6 +15,14 @@
 		3CC74C6E2B965795000A3F1E /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC74C6B2B965795000A3F1E /* SDL2_mixer.framework */; };
 		3CC74C6F2B965795000A3F1E /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC74C6C2B965795000A3F1E /* SDL2.framework */; };
 		3CC74C702B9657B0000A3F1E /* glm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C5F2B9655FB000A3F1E /* glm */; };
+		3CC74C732B98F90D000A3F1E /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CC74C712B98F90D000A3F1E /* Entity.cpp */; };
+		3CC74C792B99016D000A3F1E /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C6A2B965795000A3F1E /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CC74C7A2B990170000A3F1E /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C6B2B965795000A3F1E /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CC74C7B2B990173000A3F1E /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C6C2B965795000A3F1E /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CC74C7C2B990177000A3F1E /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C682B96576B000A3F1E /* OpenGL.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CC74C7D2B99017A000A3F1E /* Cocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C662B965760000A3F1E /* Cocoa.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CC74C7E2B99019A000A3F1E /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C5E2B9655FB000A3F1E /* shaders */; };
+		3CC74C872B990841000A3F1E /* assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC74C862B990840000A3F1E /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +32,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				3CC74C872B990841000A3F1E /* assets in CopyFiles */,
 				3CC74C702B9657B0000A3F1E /* glm in CopyFiles */,
+				3CC74C7E2B99019A000A3F1E /* shaders in CopyFiles */,
+				3CC74C792B99016D000A3F1E /* SDL2_image.framework in CopyFiles */,
+				3CC74C7B2B990173000A3F1E /* SDL2.framework in CopyFiles */,
+				3CC74C7A2B990170000A3F1E /* SDL2_mixer.framework in CopyFiles */,
+				3CC74C7C2B990177000A3F1E /* OpenGL.framework in CopyFiles */,
+				3CC74C7D2B99017A000A3F1E /* Cocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +58,9 @@
 		3CC74C6A2B965795000A3F1E /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		3CC74C6B2B965795000A3F1E /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		3CC74C6C2B965795000A3F1E /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		3CC74C712B98F90D000A3F1E /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		3CC74C722B98F90D000A3F1E /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		3CC74C862B990840000A3F1E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,7 @@
 		3CC74C4A2B9655DE000A3F1E = {
 			isa = PBXGroup;
 			children = (
+				3CC74C862B990840000A3F1E /* assets */,
 				3CC74C552B9655DE000A3F1E /* Lunar Lander */,
 				3CC74C542B9655DE000A3F1E /* Products */,
 				3CC74C652B965760000A3F1E /* Frameworks */,
@@ -87,6 +106,8 @@
 				3CC74C602B9655FB000A3F1E /* ShaderProgram.h */,
 				3CC74C5F2B9655FB000A3F1E /* glm */,
 				3CC74C562B9655DE000A3F1E /* main.cpp */,
+				3CC74C712B98F90D000A3F1E /* Entity.cpp */,
+				3CC74C722B98F90D000A3F1E /* Entity.h */,
 			);
 			path = "Lunar Lander";
 			sourceTree = "<group>";
@@ -161,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CC74C572B9655DE000A3F1E /* main.cpp in Sources */,
+				3CC74C732B98F90D000A3F1E /* Entity.cpp in Sources */,
 				3CC74C642B965747000A3F1E /* ShaderProgram.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
