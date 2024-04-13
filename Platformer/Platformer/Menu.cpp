@@ -34,7 +34,7 @@ Menu::~Menu()
 void Menu::initialise()
 {
     GLuint map_texture_id = Utility::load_texture(PLATFORM_FILEPATH);
-    m_state.map = new Map(LEVEL_WIDTH, LEVEL_HEIGHT, LEVEL_DATA, map_texture_id, 1.0f, 4, 1);
+    m_state.map = new Map(LEVEL_WIDTH, LEVEL_HEIGHT, LEVEL_0_DATA, map_texture_id, 1.0f, 4, 1);
     
     // Code from main.cpp's initialise()
     /**
@@ -93,7 +93,7 @@ void Menu::initialise()
     m_state.jump_sfx = Mix_LoadWAV("assets/bounce.wav");
 }
 
-void LevelA::update(float delta_time, int player_lives)
+void Menu::update(float delta_time, int player_lives)
 {
     if (delta_time == -1) {
         m_state.next_scene_id = 1;
@@ -101,10 +101,10 @@ void LevelA::update(float delta_time, int player_lives)
 }
 
 
-void LevelA::render(ShaderProgram *program)
+void Menu::render(ShaderProgram *program)
 {
     m_state.map->render(program);
-    GLuint text_texture_id = Utility::load_texture(TEXT_FILEPATH);
+    GLuint text_texture_id = Utility::load_texture(FONT_SPRITE_FILEPATH);
     Utility::draw_text(program, text_texture_id, "MURDER", 0.5f, -0.1f, glm::vec3(-1.0f,1.0f, 0.0f));
     Utility::draw_text(program, text_texture_id, "PRESS ENTER TO START", 0.5f, -0.1f, glm::vec3(-3.8f,-2.0f, 0.0f));
 }

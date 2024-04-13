@@ -1,3 +1,4 @@
+#pragma once
 #include "Map.h"
 
 enum EntityType { PLATFORM, PLAYER, ENEMY   };
@@ -20,10 +21,6 @@ private:
     glm::vec3 m_velocity;
     glm::vec3 m_acceleration;
 
-    // ————— TRANSFORMATIONS ————— //
-    float     m_speed;
-    glm::vec3 m_movement;
-    glm::mat4 m_model_matrix;
 
 
     // ————— ENEMY AI ————— //
@@ -36,6 +33,10 @@ private:
 
 
 public:
+    // ————— TRANSFORMATIONS ————— //
+    float     m_speed;
+    glm::vec3 m_movement;
+    glm::mat4 m_model_matrix;
     // ————— STATIC VARIABLES ————— //
     static const int    SECONDS_PER_FRAME = 4;
     static const int    LEFT    = 0,

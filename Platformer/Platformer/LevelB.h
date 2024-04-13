@@ -6,7 +6,7 @@ public:
     int ENEMY_COUNT = 1;
     
     // ————— CONSTRUCTOR ————— //
-    ~LevelC();
+    ~LevelB();
     
     // ————— METHODS ————— //
     void initialise() override;

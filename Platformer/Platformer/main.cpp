@@ -26,7 +26,6 @@
 #include "LevelA.h"
 #include "LevelB.h"
 #include "LevelC.h"
-#include "Effects.h"
 
 // ––––– CONSTANTS ––––– //
 const int WINDOW_WIDTH  = 640,
@@ -207,7 +206,7 @@ void update()
     }
     
     while (delta_time >= FIXED_TIMESTEP) {
-        g_current_scene->update(FIXED_TIMESTEP);
+        g_current_scene->update(FIXED_TIMESTEP, player_lives);
         delta_time -= FIXED_TIMESTEP;
     }
     
@@ -224,7 +223,6 @@ void update()
     
     if (g_current_scene == g_levelA && g_current_scene->m_state.player->get_position().y < -10.0f) switch_to_scene(g_levelB);
     
-    g_view_matrix = glm::translate(g_view_matrix, g_effects->m_view_offset);
 }
 
 void render()
@@ -234,7 +232,7 @@ void render()
  
     glUseProgram(g_shader_program.get_program_id());
     g_current_scene->render(&g_shader_program);
-    g_effects->render();
+
     
     SDL_GL_SwapWindow(g_display_window);
 }
@@ -245,7 +243,6 @@ void shutdown()
     
     delete g_levelA;
     delete g_levelB;
-    delete g_effects;
 }
 
 // ––––– DRIVER GAME LOOP ––––– //
