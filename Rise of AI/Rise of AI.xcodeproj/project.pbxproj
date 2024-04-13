@@ -16,11 +16,11 @@
 		3C8FB31F2BB3CFD000437AAF /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */; };
 		3C8FB3202BB3CFED00437AAF /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3132BB3CE9300437AAF /* shaders */; };
 		3C8FB3232BB65FF700437AAF /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FB3212BB65FF700437AAF /* Entity.cpp */; };
-		3C8FB32B2BB6613100437AAF /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3C8FB32D2BB6613B00437AAF /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31A2BB3CFD000437AAF /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3C8FB3382BB6711300437AAF /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3182BB3CFAC00437AAF /* OpenGL.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3C8FB3392BB6711700437AAF /* Cocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3162BB3CF9F00437AAF /* Cocoa.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3C8FB3402BB671FD00437AAF /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31B2BB3CFD000437AAF /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C8FB32B2BB6613100437AAF /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C8FB32D2BB6613B00437AAF /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31A2BB3CFD000437AAF /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C8FB3382BB6711300437AAF /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3182BB3CFAC00437AAF /* OpenGL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C8FB3392BB6711700437AAF /* Cocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3162BB3CF9F00437AAF /* Cocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C8FB3402BB671FD00437AAF /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31B2BB3CFD000437AAF /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C8FB34F2BB67C3100437AAF /* Assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB34E2BB67C3100437AAF /* Assets */; };
 /* End PBXBuildFile section */
 
@@ -314,6 +314,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = (
 					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,
 					/Library/Frameworks/SDL2.framework/Versions/A/Headers,
+					/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

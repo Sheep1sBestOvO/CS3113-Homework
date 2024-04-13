@@ -82,10 +82,10 @@
 		3CC74C4A2B9655DE000A3F1E = {
 			isa = PBXGroup;
 			children = (
+				3CC74C652B965760000A3F1E /* Frameworks */,
 				3CC74C862B990840000A3F1E /* assets */,
 				3CC74C552B9655DE000A3F1E /* Lunar Lander */,
 				3CC74C542B9655DE000A3F1E /* Products */,
-				3CC74C652B965760000A3F1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
