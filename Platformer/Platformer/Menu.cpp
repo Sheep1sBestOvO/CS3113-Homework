@@ -81,16 +81,6 @@ void Menu::initialise()
     m_state.enemies[0].set_acceleration(glm::vec3(0.0f, -9.81f, 0.0f));
     
     
-    /**
-     BGM and SFX
-     */
-    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
-    
-    m_state.bgm = Mix_LoadMUS("assets/dooblydoo.mp3");
-    Mix_PlayMusic(m_state.bgm, -1);
-    Mix_VolumeMusic(0.0f);
-    
-    m_state.jump_sfx = Mix_LoadWAV("assets/bounce.wav");
 }
 
 void Menu::update(float delta_time, int player_lives)
