@@ -11,6 +11,7 @@ const char  SPRITESHEET_FILEPATH[]  = "assets/loose sprites.jpg",
             MAP_TILESET_FILEPATH[]  = "assets/oak_woods_tileset.png",
             BGM_FILEPATH[]          = "assets/Ancient Mystery Waltz Presto.mp3",
             ENEMY_FILEPATH[]        = "assets/jump.png",
+            DEATH_FILEPATH[]        = "assets/Goblin Death.wav",
             TEXT_FILEPATH[]         = "assets/font1.png";
 
 
@@ -31,7 +32,7 @@ LevelC::~LevelC()
     delete[] m_state.enemies;
     delete    m_state.player;
     delete    m_state.map;
-
+    Mix_FreeChunk(m_state.jump_sfx);
     Mix_FreeMusic(m_state.bgm);
 }
 
@@ -93,7 +94,8 @@ void LevelC::initialise()
     m_state.bgm = Mix_LoadMUS(BGM_FILEPATH);
     Mix_PlayMusic(m_state.bgm, -1);
     Mix_VolumeMusic(MIX_MAX_VOLUME / 16.0f);
-
+    
+    m_state.jump_sfx = Mix_LoadWAV(DEATH_FILEPATH);
 
     }
 

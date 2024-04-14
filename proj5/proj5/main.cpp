@@ -160,6 +160,7 @@ void process_input()
                         if (g_current_scene->m_state.player->m_collided_bottom)
                         {
                             g_current_scene->m_state.player->m_is_jumping = true;
+                            Mix_PlayChannel(-1, g_current_scene->m_state.jump_sfx, 0);
                         }
                         break;
                     case SDLK_RETURN:

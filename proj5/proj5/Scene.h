@@ -27,6 +27,7 @@ struct GameState
     Map* map;
 
     Mix_Music* bgm;
+    Mix_Chunk *jump_sfx;
     int next_scene_id = -1;
     
 };
