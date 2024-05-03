@@ -7,21 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C8FB3092BB3CE6000437AAF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FB3082BB3CE6000437AAF /* main.cpp */; };
-		3C8FB3142BB3CE9300437AAF /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FB3112BB3CE9300437AAF /* ShaderProgram.cpp */; };
 		3C8FB3172BB3CF9F00437AAF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8FB3162BB3CF9F00437AAF /* Cocoa.framework */; };
 		3C8FB3192BB3CFAC00437AAF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8FB3182BB3CFAC00437AAF /* OpenGL.framework */; };
 		3C8FB31D2BB3CFD000437AAF /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8FB31A2BB3CFD000437AAF /* SDL2.framework */; };
 		3C8FB31E2BB3CFD000437AAF /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8FB31B2BB3CFD000437AAF /* SDL2_mixer.framework */; };
 		3C8FB31F2BB3CFD000437AAF /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */; };
-		3C8FB3202BB3CFED00437AAF /* shaders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3132BB3CE9300437AAF /* shaders */; };
-		3C8FB3232BB65FF700437AAF /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8FB3212BB65FF700437AAF /* Entity.cpp */; };
-		3C8FB32B2BB6613100437AAF /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3C8FB32D2BB6613B00437AAF /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31A2BB3CFD000437AAF /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3C8FB3382BB6711300437AAF /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3182BB3CFAC00437AAF /* OpenGL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3C8FB3392BB6711700437AAF /* Cocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3162BB3CF9F00437AAF /* Cocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3C8FB3402BB671FD00437AAF /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31B2BB3CFD000437AAF /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C8FB34F2BB67C3100437AAF /* Assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB34E2BB67C3100437AAF /* Assets */; };
+		3CDD88CA2BCB2E7C0056E6AC /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB3182BB3CFAC00437AAF /* OpenGL.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD88CB2BCB2E9A0056E6AC /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31A2BB3CFD000437AAF /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD88CC2BCB2EA50056E6AC /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31B2BB3CFD000437AAF /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD88CD2BCB2EAF0056E6AC /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD89022BCB33BB0056E6AC /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD88FB2BCB33BB0056E6AC /* ShaderProgram.cpp */; };
+		3CDD89032BCB33BB0056E6AC /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD89012BCB33BB0056E6AC /* Scene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,12 +29,10 @@
 			dstSubfolderSpec = 6;
 			files = (
 				3C8FB34F2BB67C3100437AAF /* Assets in CopyFiles */,
-				3C8FB3202BB3CFED00437AAF /* shaders in CopyFiles */,
-				3C8FB32D2BB6613B00437AAF /* SDL2.framework in CopyFiles */,
-				3C8FB3392BB6711700437AAF /* Cocoa.framework in CopyFiles */,
-				3C8FB32B2BB6613100437AAF /* SDL2_image.framework in CopyFiles */,
-				3C8FB3382BB6711300437AAF /* OpenGL.framework in CopyFiles */,
-				3C8FB3402BB671FD00437AAF /* SDL2_mixer.framework in CopyFiles */,
+				3CDD88CA2BCB2E7C0056E6AC /* OpenGL.framework in CopyFiles */,
+				3CDD88CB2BCB2E9A0056E6AC /* SDL2.framework in CopyFiles */,
+				3CDD88CC2BCB2EA50056E6AC /* SDL2_mixer.framework in CopyFiles */,
+				3CDD88CD2BCB2EAF0056E6AC /* SDL2_image.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,20 +40,19 @@
 
 /* Begin PBXFileReference section */
 		3C8FB3052BB3CE6000437AAF /* Rise of AI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Rise of AI"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C8FB3082BB3CE6000437AAF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		3C8FB30F2BB3CE9300437AAF /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
-		3C8FB3102BB3CE9300437AAF /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
-		3C8FB3112BB3CE9300437AAF /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
-		3C8FB3122BB3CE9300437AAF /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
-		3C8FB3132BB3CE9300437AAF /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
 		3C8FB3162BB3CF9F00437AAF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3C8FB3182BB3CFAC00437AAF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3C8FB31A2BB3CFD000437AAF /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		3C8FB31B2BB3CFD000437AAF /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		3C8FB31C2BB3CFD000437AAF /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
-		3C8FB3212BB65FF700437AAF /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
-		3C8FB3222BB65FF700437AAF /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		3C8FB34E2BB67C3100437AAF /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../../Downloads/Assets; sourceTree = "<group>"; };
+		3CDD88F92BCB33BB0056E6AC /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = ../../../Downloads/Add/stb_image.h; sourceTree = "<group>"; };
+		3CDD88FA2BCB33BB0056E6AC /* Rise of AI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Rise of AI"; path = "../../../Downloads/Add/Rise of AI"; sourceTree = "<group>"; };
+		3CDD88FB2BCB33BB0056E6AC /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderProgram.cpp; path = ../../../Downloads/Add/ShaderProgram.cpp; sourceTree = "<group>"; };
+		3CDD88FC2BCB33BB0056E6AC /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = shaders; path = ../../../Downloads/Add/shaders; sourceTree = "<group>"; };
+		3CDD88FD2BCB33BB0056E6AC /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Scene.hpp; path = ../../../Downloads/Add/Scene.hpp; sourceTree = "<group>"; };
+		3CDD88FF2BCB33BB0056E6AC /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderProgram.h; path = ../../../Downloads/Add/ShaderProgram.h; sourceTree = "<group>"; };
+		3CDD89012BCB33BB0056E6AC /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = ../../../Downloads/Add/Scene.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,14 @@
 		3C8FB2FC2BB3CE6000437AAF = {
 			isa = PBXGroup;
 			children = (
+				3CDD88FA2BCB33BB0056E6AC /* Rise of AI */,
+				3CDD89012BCB33BB0056E6AC /* Scene.cpp */,
+				3CDD88FD2BCB33BB0056E6AC /* Scene.hpp */,
+				3CDD88FB2BCB33BB0056E6AC /* ShaderProgram.cpp */,
+				3CDD88FF2BCB33BB0056E6AC /* ShaderProgram.h */,
+				3CDD88FC2BCB33BB0056E6AC /* shaders */,
+				3CDD88F92BCB33BB0056E6AC /* stb_image.h */,
 				3C8FB34E2BB67C3100437AAF /* Assets */,
-				3C8FB3072BB3CE6000437AAF /* Rise of AI */,
 				3C8FB3152BB3CF9F00437AAF /* Frameworks */,
 				3C8FB3062BB3CE6000437AAF /* Products */,
 			);
@@ -93,21 +93,6 @@
 				3C8FB3052BB3CE6000437AAF /* Rise of AI */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3C8FB3072BB3CE6000437AAF /* Rise of AI */ = {
-			isa = PBXGroup;
-			children = (
-				3C8FB30F2BB3CE9300437AAF /* glm */,
-				3C8FB3112BB3CE9300437AAF /* ShaderProgram.cpp */,
-				3C8FB3122BB3CE9300437AAF /* ShaderProgram.h */,
-				3C8FB3132BB3CE9300437AAF /* shaders */,
-				3C8FB3102BB3CE9300437AAF /* stb_image.h */,
-				3C8FB3082BB3CE6000437AAF /* main.cpp */,
-				3C8FB3212BB65FF700437AAF /* Entity.cpp */,
-				3C8FB3222BB65FF700437AAF /* Entity.h */,
-			);
-			path = "Rise of AI";
 			sourceTree = "<group>";
 		};
 		3C8FB3152BB3CF9F00437AAF /* Frameworks */ = {
@@ -179,9 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8FB3092BB3CE6000437AAF /* main.cpp in Sources */,
-				3C8FB3232BB65FF700437AAF /* Entity.cpp in Sources */,
-				3C8FB3142BB3CE9300437AAF /* ShaderProgram.cpp in Sources */,
+				3CDD89032BCB33BB0056E6AC /* Scene.cpp in Sources */,
+				3CDD89022BCB33BB0056E6AC /* ShaderProgram.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,10 +295,9 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				"HEADER_SEARCH_PATHS[arch=*]" = (
+				HEADER_SEARCH_PATHS = (
 					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,
 					/Library/Frameworks/SDL2.framework/Versions/A/Headers,
-					/Library/Frameworks/SDL2_mixer.framework/Versions/A/Headers,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -327,6 +310,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/SDL2_image.framework/Versions/A/Headers,
+					/Library/Frameworks/SDL2.framework/Versions/A/Headers,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

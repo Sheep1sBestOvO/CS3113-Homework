@@ -6,22 +6,22 @@
 #define LEVEL0_HEIGHT 8
 
 
-const char  SPRITESHEET_FILEPATH[]  = "assets/loose sprites.jpg",
-            MAP_TILESET_FILEPATH[]  = "assets/oak_woods_tileset.png",
+const char  SPRITESHEET_FILEPATH[]  = "assets/loose sprites.png",
+            MAP_TILESET_FILEPATH[]  = "assets/tilesset.png",
             BGM_FILEPATH[]          = "assets/Ancient Mystery Waltz Presto.mp3",
             ENEMY_FILEPATH[]        = "assets/jump.png",
             TEXT_FILEPATH[]         = "assets/font1.png";
 
 unsigned int LEVEL_0_DATA[] =
 {
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  2,  2, 2,   2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  3,  3, 4,   4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1,  0,  0, 0,   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };
 
 Menu::~Menu()
@@ -36,7 +36,7 @@ Menu::~Menu()
 void Menu::initialise()
 {
     GLuint map_texture_id =  Utility::load_texture(MAP_TILESET_FILEPATH);
-    m_state.map = new Map(LEVEL0_WIDTH, LEVEL0_HEIGHT, LEVEL_0_DATA, map_texture_id, 1.0f, 25, 24);
+    m_state.map = new Map(LEVEL0_WIDTH, LEVEL0_HEIGHT, LEVEL_0_DATA, map_texture_id, 1.0f, 5, 3);
 
     m_state.player = new Entity();
        m_state.player->set_entity_type(PLAYER);

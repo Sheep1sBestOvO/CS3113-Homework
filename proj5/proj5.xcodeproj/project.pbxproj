@@ -26,11 +26,9 @@
 		3CDD89272BCB35780056E6AC /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD89252BCB35780056E6AC /* Scene.cpp */; };
 		3CDD89F22BCB5E680056E6AC /* Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD89F02BCB5E680056E6AC /* Win.cpp */; };
 		3CDD89F52BCB5F090056E6AC /* Lose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD89F32BCB5F090056E6AC /* Lose.cpp */; };
-		3CDD8A052BCB64360056E6AC /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C32BCB2DF20056E6AC /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CDD8A062BCB64360056E6AC /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C42BCB2DF20056E6AC /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CDD8A072BCB64360056E6AC /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C22BCB2DF20056E6AC /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CDD8A082BCB64360056E6AC /* OpenGL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C02BCB2DE30056E6AC /* OpenGL.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CDD8A092BCB64360056E6AC /* Cocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88BE2BCB2DD70056E6AC /* Cocoa.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD8A812BE32EA80056E6AC /* SDL2_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C32BCB2DF20056E6AC /* SDL2_image.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD8A822BE32EA80056E6AC /* SDL2_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C42BCB2DF20056E6AC /* SDL2_mixer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CDD8A832BE32EA80056E6AC /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CDD88C22BCB2DF20056E6AC /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,11 +40,9 @@
 			files = (
 				3CDD88C82BCB2E000056E6AC /* shaders in CopyFiles */,
 				3CDD88C92BCB2E030056E6AC /* assets in CopyFiles */,
-				3CDD8A052BCB64360056E6AC /* SDL2_image.framework in CopyFiles */,
-				3CDD8A062BCB64360056E6AC /* SDL2_mixer.framework in CopyFiles */,
-				3CDD8A072BCB64360056E6AC /* SDL2.framework in CopyFiles */,
-				3CDD8A082BCB64360056E6AC /* OpenGL.framework in CopyFiles */,
-				3CDD8A092BCB64360056E6AC /* Cocoa.framework in CopyFiles */,
+				3CDD8A812BE32EA80056E6AC /* SDL2_image.framework in CopyFiles */,
+				3CDD8A822BE32EA80056E6AC /* SDL2_mixer.framework in CopyFiles */,
+				3CDD8A832BE32EA80056E6AC /* SDL2.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

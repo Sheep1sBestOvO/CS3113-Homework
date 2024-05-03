@@ -7,7 +7,7 @@
 
 
 
-const char  SPRITESHEET_FILEPATH[]  = "assets/loose sprites.jpg",
+const char  SPRITESHEET_FILEPATH[]  = "assets/loose sprites.png",
             MAP_TILESET_FILEPATH[]  = "assets/oak_woods_tileset.png",
             BGM_FILEPATH[]          = "assets/Ancient Mystery Waltz Presto.mp3",
             ENEMY_FILEPATH[]        = "assets/jump.png",
