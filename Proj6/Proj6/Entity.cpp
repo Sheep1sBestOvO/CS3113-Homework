@@ -97,7 +97,7 @@ void Entity::ai_walk()
             move_left();
             m_animation_indices = m_walking[LEFT];
             if(this->m_collided_left){
-                m_ai_state = STOP_MOVE;
+                m_ai_state = CHANGE_DIRECTION;
             }
         break;
 
@@ -105,14 +105,14 @@ void Entity::ai_walk()
             move_right();
             m_animation_indices = m_walking[RIGHT];
             if(this->m_collided_right){
-                m_ai_state = STOP_MOVE;
+                m_ai_state = CHANGE_DIRECTION;
             }
         break;
     case GO_UP:
             move_up();
             m_animation_indices = m_walking[UP];
             if(this->m_collided_top){
-                m_ai_state = STOP_MOVE;
+                m_ai_state = CHANGE_DIRECTION;
             }
             
         break;
@@ -121,26 +121,24 @@ void Entity::ai_walk()
             move_down();
             m_animation_indices = m_walking[DOWN];
             if(this->m_collided_bottom){
-                m_ai_state = STOP_MOVE;
+                m_ai_state = CHANGE_DIRECTION;
             }
         break;
     
-    case STOP_MOVE:
-            dont_move();
-            thing = (rand() % 4) + 1;
-            if(thing == 1){
-                m_ai_state = GO_RIGHT;
-            }
-            else if(thing == 2){
-                m_ai_state = GO_UP;
-            }else if(thing == 3){
-                m_ai_state = GO_DOWN;
-            }else{
+    case CHANGE_DIRECTION:
+            stopmoving();
+            int random = rand() % 4;
+            if (random == 0) {
                 m_ai_state = GO_LEFT;
+            }else if (random == 1){
+                m_ai_state = GO_RIGHT;
+            }else if (random == 2){
+                m_ai_state = GO_UP;
+            }else{
+                m_ai_state = GO_DOWN;
             }
+            
             break;
-    default:
-        break;
     }
     
 }
@@ -153,7 +151,6 @@ void Entity::update(float delta_time, Entity* player, Entity* objects, int objec
     if (!m_is_active) return;
 
     
-
     if (m_entity_type == ENEMY) ai_activate(player);
     
     m_collided_top = false;
@@ -163,7 +160,7 @@ void Entity::update(float delta_time, Entity* player, Entity* objects, int objec
     
     if (m_animation_indices != NULL)
     {
-        if (glm::length(m_movement) != 0 || sizeof(m_walking[player->RIGHT]) > 7)
+        if (glm::length(m_movement) != 0)
         {
             m_animation_time += delta_time;
             float frames_per_second = (float)1 / SECONDS_PER_FRAME;
@@ -184,8 +181,6 @@ void Entity::update(float delta_time, Entity* player, Entity* objects, int objec
     m_velocity.x = m_movement.x * m_speed;
     m_velocity.y = m_movement.y * m_speed;
 
-    // We make two calls to our check_collision methods, one for the collidable objects and one for
-    // the map.
     m_position.y += m_velocity.y * delta_time;
     
     check_collision_y(objects, object_count );
@@ -209,7 +204,7 @@ void const Entity::check_collision_y(Entity* collidable_entities, int collidable
         
         if (check_collision(collidable_entity))
         {
-            if(collidable_entity->get_ai_type() == DOT){
+            if(collidable_entity->get_ai_type() == GOLD){
                 dot_count--;
                 collidable_entity->deactivate();
                 eat = true;
@@ -245,7 +240,7 @@ void const Entity::check_collision_x(Entity* collidable_entities, int collidable
 
             if (check_collision(collidable_entity))
             {
-                if(collidable_entity->get_ai_type() == DOT){
+                if(collidable_entity->get_ai_type() == GOLD){
                     dot_count--;
                     collidable_entity->deactivate();
                     eat = true;

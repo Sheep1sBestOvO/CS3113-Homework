@@ -58,7 +58,7 @@ const float MILLISECONDS_IN_SECOND = 1000.0;
 
 // ––––– GLOBAL VARIABLES ––––– //
 Scene  *g_current_scene;
-LevelA *g_levelA;
+LevelA *levelA;
 Win *win;
 Lose *lose;
 Menu *menu;
@@ -121,17 +121,17 @@ void initialise()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    g_levelA = new LevelA();
+    levelA = new LevelA();
     win = new Win();
     lose = new Lose();
     menu = new Menu();
-    g_levels[0] = g_levelA;
-    g_levels[1] = win;
-    g_levels[2] = lose;
-    g_levels[3] = menu;
+    g_levels[0] = menu;
+    g_levels[1] = levelA;
+    g_levels[2] = win;
+    g_levels[3] = lose;
     
     // Start at Menu
-    switch_to_scene(g_levels[3]);
+    switch_to_scene(g_levels[0]);
     
     
     
@@ -161,7 +161,7 @@ void process_input()
                         break;
                         
                     case SDLK_RETURN:
-                        if (g_current_scene == g_levels[3])
+                        if (g_current_scene == g_levels[0])
                         {
                             g_current_scene->update(-1);
 
@@ -257,7 +257,7 @@ void shutdown()
 {
     SDL_Quit();
     
-    delete g_levelA;
+    delete levelA;
     
 }
 

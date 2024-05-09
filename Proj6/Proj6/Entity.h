@@ -2,8 +2,8 @@
 #include "Map.h"
 
 enum EntityType { PLATFORM, PLAYER, ENEMY, LIVES};
-enum AIType     { WALKER, GUARD, DOT, POWERUP  };
-enum AIState    {IDLE, GO_LEFT, GO_RIGHT, GO_UP, GO_DOWN, STOP_MOVE };
+enum AIType     { WALKER, GOLD};
+enum AIState    {IDLE, GO_LEFT, GO_RIGHT, GO_UP, GO_DOWN, CHANGE_DIRECTION };
 
 
 class Entity
@@ -42,8 +42,6 @@ public:
     int dot_count = 0;
     bool eat = false;
     bool die = false;
-    bool power = false;
-    float powerup_time = 0;
     int lives = 3;
     
     static const int    SECONDS_PER_FRAME = 4;
@@ -51,7 +49,6 @@ public:
                         RIGHT   = 1,
                         UP      = 2,
                         DOWN    = 3;
-    int thing = 0;
     
     glm::vec3 m_scale = glm::vec3(1.00f, 1.00f,0.0f);
     // ————— ANIMATION ————— //
@@ -103,7 +100,7 @@ public:
     void move_right()   { m_movement.x = 1.0f; };
     void move_up()      { m_movement.y = 1.0f; };
     void move_down()    { m_movement.y = -1.0f; };
-    void dont_move()    {
+    void stopmoving()    {
         m_movement.x = 0.0f;
         m_movement.y = 0.0f;
         
@@ -125,7 +122,6 @@ public:
     glm::vec3  const get_movement()       const { return m_movement;        };
     glm::vec3  const get_velocity()       const { return m_velocity;        };
     glm::vec3  const get_acceleration()   const { return m_acceleration;    };
-    float      const get_jumping_power()  const { return m_jumping_power;   };
     float      const get_speed()          const { return m_speed;           };
     int        const get_width()          const { return m_width;           };
     int        const get_height()         const { return m_height;          };
@@ -140,7 +136,6 @@ public:
     void const set_velocity(glm::vec3 new_velocity)         { m_velocity = new_velocity;            };
     void const set_speed(float new_speed)                   { m_speed = new_speed;                  };
     void const set_scale(glm::vec3 new_scale)               { m_scale = new_scale;};
-    void const set_jumping_power(float new_jumping_power)   { m_jumping_power = new_jumping_power;  };
     void const set_acceleration(glm::vec3 new_acceleration) { m_acceleration = new_acceleration;    };
     void const set_width(float new_width)                   { m_width = new_width;                  };
     void const set_height(float new_height)                 { m_height = new_height;                };

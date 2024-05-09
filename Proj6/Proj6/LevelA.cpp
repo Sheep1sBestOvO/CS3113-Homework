@@ -84,10 +84,8 @@ void LevelA::initialise(int lives)
     
     /**
      Enemies' stuff */
-    GLuint bliky_texture = Utility::load_texture("assets/Bird.png");
-    GLuint pinky_texture = Utility::load_texture("assets/Bird.png");
-    GLuint clyde_texture = Utility::load_texture("assets/whitebird.png");
-    GLuint inky_texture = Utility::load_texture("assets/whitebird.png");
+    GLuint enemy1_texture = Utility::load_texture("assets/BIRD.png");
+    GLuint enemy2_texture = Utility::load_texture("assets/whitebird.png");
     GLuint coin_texture = Utility::load_texture("assets/GoldCoinSpinning.png");
    
     if(lives == 3){
@@ -104,7 +102,7 @@ void LevelA::initialise(int lives)
     /* top part */
     for(int i = 0; i < 10; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+8, -2, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -122,7 +120,7 @@ void LevelA::initialise(int lives)
     /*left part*/
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+2, -6, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -139,7 +137,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+2, -7, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -156,7 +154,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+2, -10, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -173,7 +171,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+2, -11, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -190,7 +188,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+8, -11, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -211,7 +209,7 @@ void LevelA::initialise(int lives)
     /*right part*/
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+21, -6, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -228,7 +226,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+21, -7, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -245,7 +243,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+21, -10, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -262,7 +260,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 3; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+21, -11, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -280,7 +278,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 10; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+8, -13, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -298,7 +296,7 @@ void LevelA::initialise(int lives)
     /*bottom*/
     for(int i = 0; i < 4; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+4, -17, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -315,7 +313,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 4; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+11, -17, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -332,7 +330,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 4; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+18, -17, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -350,7 +348,7 @@ void LevelA::initialise(int lives)
     
     for(int i = 0; i < 10; i++){
         m_state.enemies[i+cur].m_texture_id = coin_texture;
-        m_state.enemies[i+cur].set_ai_type(DOT);
+        m_state.enemies[i+cur].set_ai_type(GOLD);
         m_state.enemies[i+cur].set_position(glm::vec3(i+8, -15, 0.0f));
         m_state.enemies[i+cur].m_walking[Entity::LEFT]  = new int[24] {0,1,2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
         m_state.enemies[i+cur].m_animation_indices = m_state.enemies[i+cur].m_walking[Entity::LEFT];
@@ -397,10 +395,10 @@ void LevelA::initialise(int lives)
         m_state.enemies[i].set_height(0.7f);
         
     }
-    m_state.enemies[cur].m_texture_id = clyde_texture;
-    m_state.enemies[cur+1].m_texture_id = inky_texture;
-    m_state.enemies[cur+2].m_texture_id = bliky_texture;
-    m_state.enemies[cur+3].m_texture_id = pinky_texture;
+    m_state.enemies[cur].m_texture_id = enemy1_texture;
+    m_state.enemies[cur+1].m_texture_id = enemy1_texture;
+    m_state.enemies[cur+2].m_texture_id = enemy2_texture;
+    m_state.enemies[cur+3].m_texture_id = enemy2_texture;
     m_state.player->dot_count = cur;
     
     for(int i = 0; i < ENEMY_COUNT; i++){
@@ -448,7 +446,7 @@ void LevelA::update(float delta_time)
        m_state.player->update(delta_time, m_state.player, m_state.enemies, ENEMY_COUNT, m_state.map);
        for (int i = 0; i < ENEMY_COUNT; i++) m_state.enemies[i].update(delta_time, m_state.player, NULL, 0, m_state.map);
        if (m_state.player->dot_count == 0){
-           m_state.next_scene_id = 1;
+           m_state.next_scene_id = 2;
        }
        if(m_state.player->eat){
            
@@ -462,7 +460,7 @@ void LevelA::update(float delta_time)
         m_state.lives[m_state.player->lives].deactivate();
     }
     if(m_state.player->lives == 0) {
-        m_state.next_scene_id = 2;
+        m_state.next_scene_id = 3;
     }
        
        for (int i = 0; i < 3; i++) m_state.lives[i].update(delta_time, m_state.player, NULL, 0, m_state.map);

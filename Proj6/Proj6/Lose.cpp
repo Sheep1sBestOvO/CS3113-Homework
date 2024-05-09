@@ -55,7 +55,6 @@ void Lose::initialise(int lives)
     m_state.player->set_movement(glm::vec3(0.0f));
     m_state.player->set_speed(2.5f);
     
-    m_state.player->m_texture_id = Utility::load_texture("assets/deadPacman.png");
     
     // Walking
     
