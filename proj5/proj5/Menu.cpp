@@ -6,11 +6,7 @@
 #define LEVEL0_HEIGHT 8
 
 
-const char  SPRITESHEET_FILEPATH[]  = "assets/loose sprites.png",
-            MAP_TILESET_FILEPATH[]  = "assets/tilesset.png",
-            BGM_FILEPATH[]          = "assets/Ancient Mystery Waltz Presto.mp3",
-            ENEMY_FILEPATH[]        = "assets/jump.png",
-            TEXT_FILEPATH[]         = "assets/font1.png";
+
 
 unsigned int LEVEL_0_DATA[] =
 {

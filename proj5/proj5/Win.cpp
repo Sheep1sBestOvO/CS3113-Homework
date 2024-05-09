@@ -99,6 +99,6 @@ void Win::render(ShaderProgram *program)
     m_state.map->render(program);
     GLuint text_texture_id = Utility::load_texture(TEXT_FILEPATH);
     
-    Utility::draw_text(program, text_texture_id, "You win!", 0.5f, -0.1f, glm::vec3(3.8f,-2.0f, 0.0f));
+    Utility::draw_text(program, text_texture_id, "You win", 0.5f, -0.1f, glm::vec3(3.8f,-2.0f, 0.0f));
    
 }
